@@ -1,0 +1,68 @@
+# Register Admin
+POST http://localhost:3000/v1/auth/register
+content-Type: application/json
+
+{
+    "fname": "Admin Star",
+    "email": "abujaAdmin1@gmail.com",
+    "password": "12245",
+    "role": "admin"
+}
+###
+# Register Admin
+POST http://localhost:3000/v1/auth/register
+content-Type: application/json
+
+{
+    "fname": "Admin 1",
+    "email": "4chimabika@gmail.com",
+    "password": "12245",
+    "role": "admin"
+}
+
+###
+# Register Customer
+POST http://localhost:3000/v1/auth/register
+content-Type: application/json
+
+{
+    "fname": "Customer Star",
+    "email": "abujaCustomer1@gmail.com",
+    "password": "12245",
+    "role": "customer"
+}
+
+
+###
+# Reset newPassword
+POST http://localhost:3000/v1/auth/reset-password
+content-Type: application/json
+
+{
+    "newPassword": "122455",
+    "token": "7c6563c4-b4a6-4f7d-9eb5-87e08f0a6759"
+}
+
+# Q1: How come it understands the two different authourization 
+# headers? When you switch it does not work
+
+###
+# Forgot newPassword
+POST http://localhost:3000/v1/auth/forgot-password
+content-Type: application/json
+
+{
+    "email": "4chimabika@gmail.com"
+}
+
+###
+# New Password
+POST http://localhost:3000/v1/auth/reset-password/118a7ce2-9458-4bd1-9d11-ca60b6a21f36
+content-Type: application/json
+
+{
+    "newPassword": "jkh"
+}
+
+
+

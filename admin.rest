@@ -1,0 +1,75 @@
+# Login
+POST http://localhost:3000/v1/auth/login
+content-Type: application/json
+
+{
+    "email": "abujaAdmin1@gmail.com",
+    "password": "12245"
+}
+###
+# Login
+POST http://localhost:3000/v1/auth/login
+content-Type: application/json
+
+{
+    "email": "4chimabika@gmail.com",
+    "password": "jkh"
+}
+
+###
+# Admin Add Product
+POST http://localhost:3000/v1/admin/addProducts
+content-Type: application/json
+#   "quantity": 50
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmIzOTdiNzQzYThlNjAxMjU1MGI5MzkiLCJmbmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW4xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMzIzNDY5NCwiZXhwIjoxNzIzMjM4Mjk0fQ.SYUuhxqP8B7SkVZ6xPeKQnPPHGnkq6nHexxIfytb-0Q
+
+{
+  "name": "Product3",
+  "description": "A sample three product",
+  "price": 79.99
+}
+
+###
+# Admin Add Product
+POST http://localhost:3000/v1/admin/addProducts
+content-Type: application/json
+#   "quantity": 50
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmIzOTdiNzQzYThlNjAxMjU1MGI5MzkiLCJmbmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW4xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMzIzNDY5NCwiZXhwIjoxNzIzMjM4Mjk0fQ.SYUuhxqP8B7SkVZ6xPeKQnPPHGnkq6nHexxIfytb-0Q
+
+{
+  "name": "Product4",
+  "description": "A slkghdfample three product",
+  "price": 79.99900
+}
+
+###
+# Admin Edit Product
+PUT http://localhost:3000/v1/admin/editProducts/66b5fc02ce1f6333dbf58ea2
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmIzOTdiNzQzYThlNjAxMjU1MGI5MzkiLCJmbmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW4xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMzIzNDY5NCwiZXhwIjoxNzIzMjM4Mjk0fQ.SYUuhxqP8B7SkVZ6xPeKQnPPHGnkq6nHexxIfytb-0Q
+
+{
+  "name": "Product1",
+  "description": "A sample one product"
+}
+
+###
+# Admin view All Products
+GET http://localhost:3000/v1/admin/viewAllProducts
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmIzOTdiNzQzYThlNjAxMjU1MGI5MzkiLCJmbmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW4xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMzIzNDY5NCwiZXhwIjoxNzIzMjM4Mjk0fQ.SYUuhxqP8B7SkVZ6xPeKQnPPHGnkq6nHexxIfytb-0Q
+
+
+###
+# Admin view Single Products
+GET http://localhost:3000/v1/admin/viewAProducts/66b66c99553a92100d770101
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmIzOTdiNzQzYThlNjAxMjU1MGI5MzkiLCJmbmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW4xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMzIzNDY5NCwiZXhwIjoxNzIzMjM4Mjk0fQ.SYUuhxqP8B7SkVZ6xPeKQnPPHGnkq6nHexxIfytb-0Q
+
+###
+# Admin view Single Products
+DELETE http://localhost:3000/v1/admin/deleteAProduct/66b66c99553a92100d770101
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmIzOTdiNzQzYThlNjAxMjU1MGI5MzkiLCJmbmFtZSI6IkFkbWluIFN0YXIiLCJlbWFpbCI6ImFidWphQWRtaW4xQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMzIzNDY5NCwiZXhwIjoxNzIzMjM4Mjk0fQ.SYUuhxqP8B7SkVZ6xPeKQnPPHGnkq6nHexxIfytb-0Q
+
+

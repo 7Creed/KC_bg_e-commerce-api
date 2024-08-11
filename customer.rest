@@ -1,0 +1,42 @@
+# Login
+POST http://localhost:3000/v1/auth/login
+content-Type: application/json
+
+{
+    "email": "abujaCustomer1@gmail.com",
+    "password": "12245"
+}
+
+###
+# Admin view All Products
+GET http://localhost:3000/v1/customer/viewAllProducts
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI2ODRmODE4OTAyNWFhZTVjYzNlMjQiLCJmbmFtZSI6IkN1c3RvbWVyIFN0YXIiLCJlbWFpbCI6ImFidWphQ3VzdG9tZXIxQGdtYWlsLmNvbSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTcyMzM3NzEwNSwiZXhwIjoxNzIzMzgwNzA1fQ.9PtlxsQe6iWrHsPVjYbYA1o8tgsDnswSLI4AkoldOLY
+
+###
+# Admin view Single Products
+GET http://localhost:3000/v1/customer/viewAProducts/66b663459060431da7c7c92f
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI2ODRmODE4OTAyNWFhZTVjYzNlMjQiLCJmbmFtZSI6IkN1c3RvbWVyIFN0YXIiLCJlbWFpbCI6ImFidWphQ3VzdG9tZXIxQGdtYWlsLmNvbSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTcyMzM3NzEwNSwiZXhwIjoxNzIzMzgwNzA1fQ.9PtlxsQe6iWrHsPVjYbYA1o8tgsDnswSLI4AkoldOLY
+
+###
+
+POST http://localhost:3000/v1/customer/addToCart
+content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI2ODRmODE4OTAyNWFhZTVjYzNlMjQiLCJmbmFtZSI6IkN1c3RvbWVyIFN0YXIiLCJlbWFpbCI6ImFidWphQ3VzdG9tZXIxQGdtYWlsLmNvbSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTcyMzM3NzEwNSwiZXhwIjoxNzIzMzgwNzA1fQ.9PtlxsQe6iWrHsPVjYbYA1o8tgsDnswSLI4AkoldOLY
+            # "totalAmount": 49.99
+            # "totalAmount": 79.99
+
+{
+    "items": [
+        { 
+            "productId": "66b5fc02ce1f6333dbf58ea2",
+             "quantity": 2
+        },
+        { 
+           "productId": "66b663339060431da7c7c92d",
+           "quantity": 1
+
+        }
+            ]
+}
