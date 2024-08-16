@@ -83,7 +83,7 @@ const loginUser = async function (req, res, next) {
         role: user.role,
       },
       userToken,
-      message: "Logged in successfully",
+      message: "Login successful",
     });
   } catch (error) {
     next(error);

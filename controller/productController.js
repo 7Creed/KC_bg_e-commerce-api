@@ -4,7 +4,7 @@ const addProducts = async function (req, res, next) {
   const { name, price, description } = req.body;
 
   try {
-    await productCollection.create({
+    const product = await productCollection.create({
       productName: name,
       productPrice: price,
       productDesc: description,
@@ -12,6 +12,8 @@ const addProducts = async function (req, res, next) {
 
     res.status(201).send({
       message: "Product added",
+      productName: product.productName,
+      _id: product._id,
     });
   } catch (error) {
     next(error);
@@ -34,7 +36,11 @@ const editProducts = async function (req, res, next) {
     product.productDesc = description || product.productDesc;
 
     await product.save();
-    res.status(200).send({ message: "Product updated" });
+    res.status(200).send({
+      message: "Product updated",
+      productName: product.productName,
+      _id: product._id,
+    });
   } catch (error) {
     console.log("There was an error: ", error);
     next(error);
@@ -57,7 +63,7 @@ const viewAProduct = async (req, res, next) => {
     if (!product) {
       return res.status(404).send({ message: "Product not found" });
     }
-    res.send(product);
+    res.status(200).send(product);
   } catch (err) {
     next(err);
   }
